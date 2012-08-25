@@ -291,6 +291,7 @@ private function UpdateFunction () {
 		grounded = true;
 		jumping.jumping = false;
 		SubtractNewPlatformVelocity();
+		movement.velocity *= 0.3;
 		
 		SendMessage("OnLand", SendMessageOptions.DontRequireReceiver);
 	}
@@ -364,7 +365,15 @@ private function ApplyInputVelocityChange (velocity : Vector3) {
 		desiredVelocity = AdjustGroundVelocityToNormal(desiredVelocity, groundNormal);
 	else
 		velocity.y = 0;
-	
+		
+	if(Mathf.Abs(velocity.x) > Mathf.Abs(desiredVelocity.x))
+	{
+		velocity.x = desiredVelocity.x;
+	}
+	if(Mathf.Abs(velocity.z) > Mathf.Abs(desiredVelocity.z))
+	{
+		velocity.z = desiredVelocity.z;
+	}
 	// Enforce max velocity change
 	var maxVelocityChange : float = GetMaxAcceleration(grounded) * Time.deltaTime;
 	var velocityChangeVector : Vector3 = (desiredVelocity - velocity);
