@@ -7,8 +7,8 @@ public class Blockmechanics : MonoBehaviour {
 	public delegate void CollisionDelegate(BLOCK block);
 	public delegate void GameTickDelegate(float deltatime, BLOCK block);
 	
-	static CollisionDelegate[] collisionenter = new CollisionDelegate[3];
-	GameTickDelegate[] tick = new GameTickDelegate[3];
+	static CollisionDelegate[] collisionenter = new CollisionDelegate[4];
+	GameTickDelegate[] tick = new GameTickDelegate[4];
 	
 	// Update is called once per frame
 	void Update () {
@@ -48,13 +48,14 @@ public class Blockmechanics : MonoBehaviour {
 	{
 		collisionenter[1] = LevelChanger.CollisionHandler;
 		tick[2] = SetMetadataRotation;
+		
 	}
 	
 	void SetMetadataRotation(float f, BLOCK B)
 	{
 		if(gameObject == null)
 			return;
-		switch(gameObject.GetComponent<BlockData>().metadata)
+		switch(gameObject.GetComponent<BlockData>().metadata - (int)(B.metadata / 10f)*10)
 		{
 		case 0:
 			break;

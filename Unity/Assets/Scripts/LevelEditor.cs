@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class LevelEditor : MonoBehaviour {
 	public int selection = 0;
 	const int min = 0;
-	const int max = 2;
+	const int max = 3;
 	void Update()
 	{
 		if(GlobalSettings.LevelDev)
