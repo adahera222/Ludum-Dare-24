@@ -3,7 +3,8 @@ using System.Collections;
 public enum Block
 {
 	BaseBlock,
-	LevelChanger
+	LevelChanger,
+	Lamp
 }
 
 public class BLOCK {

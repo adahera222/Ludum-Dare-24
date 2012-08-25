@@ -11,19 +11,28 @@ public class Level : MonoBehaviour {
 	{
 		Debug.Log("Adding default block at " + pos.ToString());
 		blocks.Add(new BLOCK(pos));
-		GameObject.Instantiate(GlobalSettings.idtable[0], pos, Quaternion.identity);
+		GameObject go = (GameObject)GameObject.Instantiate(GlobalSettings.idtable[0], pos, Quaternion.identity);
+		go.AddComponent<Blockmechanics>();
+		go.GetComponent<BlockData>().id = 0;
+		go.GetComponent<BlockData>().metadata = 0;
 	}
 	public void AddBlock(Vector3 pos, int id)
 	{
 		Debug.Log("Adding block " + ((Block)id).ToString() + " at " + pos.ToString());
 		blocks.Add(new BLOCK(id, pos));
-		GameObject.Instantiate(GlobalSettings.idtable[id], pos, Quaternion.identity);
+		GameObject go = (GameObject)GameObject.Instantiate(GlobalSettings.idtable[id], pos, Quaternion.identity);
+		go.AddComponent<Blockmechanics>();
+		go.GetComponent<BlockData>().id = id;
+		go.GetComponent<BlockData>().metadata = 0;
 	}
 	public void AddBlock(Vector3 pos, int id, int metadata)
 	{
 		Debug.Log("Adding block " + ((Block)id).ToString() + " at " + pos.ToString() + " with metadata " + metadata);
 		blocks.Add(new BLOCK(id, pos, metadata));
-		GameObject.Instantiate(GlobalSettings.idtable[id], pos, Quaternion.identity);
+		GameObject go = (GameObject)GameObject.Instantiate(GlobalSettings.idtable[id], pos, Quaternion.identity);
+		go.AddComponent<Blockmechanics>();
+		go.GetComponent<BlockData>().id = id;
+		go.GetComponent<BlockData>().metadata = metadata;
 	}
 	public void RemoveBlock(Vector3 pos, GameObject gameobj)
 	{

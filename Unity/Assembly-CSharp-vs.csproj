@@ -45,12 +45,18 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CUBES\BLOCK.cs" />
-     <Compile Include="Assets\Scripts\CUBES\Levelchanger.cs" />
+     <Compile Include="Assets\Scripts\CUBES\BlockData.cs" />
+     <Compile Include="Assets\Scripts\CUBES\Blockmechanics.cs" />
+     <Compile Include="Assets\Scripts\CUBES\Specials\LevelChanger.cs" />
+     <Compile Include="Assets\Scripts\CharCollisionHandler.cs" />
      <Compile Include="Assets\Scripts\GlobalSettings.cs" />
      <Compile Include="Assets\Scripts\Level.cs" />
      <Compile Include="Assets\Scripts\LevelEditMove.cs" />
      <Compile Include="Assets\Scripts\LevelEditor.cs" />
      <Compile Include="Assets\Scripts\MouseCenter.cs" />
+     <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
+     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
+     <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

@@ -11,6 +11,6 @@ public class GlobalSettings : MonoBehaviour {
 	void Awake () {
 		LevelDev = IsLevelDev;
 		idtable = BlockIDs;
-		DontDestroyOnLoad(gameObject);
+		//DontDestroyOnLoad(gameObject);
 	}
 }
