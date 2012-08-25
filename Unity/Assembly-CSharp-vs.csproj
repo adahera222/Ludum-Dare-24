@@ -44,6 +44,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CUBES\BLOCK.cs" />
+     <Compile Include="Assets\Scripts\CUBES\Levelchanger.cs" />
      <Compile Include="Assets\Scripts\GlobalSettings.cs" />
      <Compile Include="Assets\Scripts\Level.cs" />
      <Compile Include="Assets\Scripts\LevelEditMove.cs" />

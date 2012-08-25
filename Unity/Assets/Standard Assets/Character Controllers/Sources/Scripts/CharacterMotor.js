@@ -60,6 +60,11 @@ class CharacterMotorMovement {
 
 var movement : CharacterMotorMovement = CharacterMotorMovement();
 
+function AllowFlight()
+{
+	movement.maxAirAcceleration = 25;
+}
+
 enum MovementTransferOnJump {
 	None, // The jump is not affected by velocity of floor at all.
 	InitTransfer, // Jump gets its initial velocity from the floor, then gradualy comes to a stop.

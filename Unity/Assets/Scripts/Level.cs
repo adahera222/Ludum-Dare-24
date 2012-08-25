@@ -5,36 +5,48 @@ using System.IO;
 
 public class Level : MonoBehaviour {
 	
-	public List<Vector3> blocks=new List<Vector3>();
-	public Object CUBE;
+	public List<BLOCK> blocks=new List<BLOCK>();
 	
 	public void AddBlock(Vector3 pos)
 	{
-		blocks.Add(pos);
-		GameObject.Instantiate(CUBE, pos, Quaternion.identity);
+		Debug.Log("Adding default block at " + pos.ToString());
+		blocks.Add(new BLOCK(pos));
+		GameObject.Instantiate(GlobalSettings.idtable[0], pos, Quaternion.identity);
+	}
+	public void AddBlock(Vector3 pos, int id)
+	{
+		Debug.Log("Adding block " + ((Block)id).ToString() + " at " + pos.ToString());
+		blocks.Add(new BLOCK(id, pos));
+		GameObject.Instantiate(GlobalSettings.idtable[id], pos, Quaternion.identity);
+	}
+	public void AddBlock(Vector3 pos, int id, int metadata)
+	{
+		Debug.Log("Adding block " + ((Block)id).ToString() + " at " + pos.ToString() + " with metadata " + metadata);
+		blocks.Add(new BLOCK(id, pos, metadata));
+		GameObject.Instantiate(GlobalSettings.idtable[id], pos, Quaternion.identity);
 	}
 	public void RemoveBlock(Vector3 pos, GameObject gameobj)
 	{
 		if(pos != new Vector3(0, 0, 0))
 		{
-			foreach(Vector3 block in blocks)
-							{
-								if((int)block.x == (int)pos.x & (int)block.y == (int)pos.y & (int)block.z == (int)pos.z)
-								{
-									blocks.Remove(block);
-									break;
-								}
-							}
+			foreach(BLOCK block in blocks)
+			{
+				if(block.pos == pos)
+				{
+					blocks.Remove(block);
+					break;
+				}
+			}
 			Destroy(gameobj);
 		}
 	}
-	public List<Vector3> GetBlocks()
+	public List<BLOCK> GetBlocks()
 	{
 		return blocks;
 	}
 	void Start()
 	{
-		blocks.Add(new Vector3(0, 0, 0));
+		blocks.Add(new BLOCK(new Vector3(0, 0, 0)));
 		loadname = levelname;
 		LoadLevel(levelname);
 	}
@@ -66,31 +78,45 @@ public class Level : MonoBehaviour {
 		{
 			using(BinaryWriter writer = new BinaryWriter(stream))
 			{
-				foreach(Vector3 block in blocks)
+				foreach(BLOCK block in blocks)
 				{
-					writer.Write((int)block.x);
-					writer.Write((int)block.y);
-					writer.Write((int)block.z);
+					writer.Write(block.id);
+					writer.Write(block.metadata);
+					writer.Write((int)block.pos.x);
+					writer.Write((int)block.pos.y);
+					writer.Write((int)block.pos.z);
 				}
 			}
 		}
 	}
 	void LoadLevel(string name)
 	{
+		Debug.Log("Starting to load level");
 		using(FileStream stream = File.Open("Levels/"+name, FileMode.Open))
 		{
 			using(BinaryReader reader = new BinaryReader(stream))
 			{
-				blocks = new List<Vector3>();
+				blocks = new List<BLOCK>();
+				GameObject[] gameobjects = GameObject.FindGameObjectsWithTag("CUBE");
+				int lenght = gameobjects.Length;
+				Debug.Log(lenght);
+				for(int i = 0; i < lenght; i++)
+				{
+					Destroy(gameobjects[i]);
+					Debug.Log("Destroyed " + (i + 1) + " out of " + lenght);
+				}
+				AddBlock(new Vector3(0, 0, 0));
 				try
 				{
+					Debug.Log("reading");
 					while(true)
 					{
+						int id = reader.ReadInt32();
+						int metadata = reader.ReadInt32();
 						int x = reader.ReadInt32();
 						int y = reader.ReadInt32();
 						int z = reader.ReadInt32();
-						AddBlock(new Vector3(x, y, z));
-						//Debug.Log("Loaded cube at " + x + ":" + y + ":" + z);
+						AddBlock(new Vector3(x,y,z), id, metadata);
 					}
 				}
 				catch

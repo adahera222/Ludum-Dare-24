@@ -9,10 +9,10 @@ public class LevelEditMove : MonoBehaviour {
 		{
 			gameObject.SendMessage("DecDev");
 			if(Input.GetKey(KeyCode.Space))
-				gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + Time.deltaTime * 1.5f, gameObject.transform.position.z);
+				gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + Time.deltaTime * 5f, gameObject.transform.position.z);
 			if(Input.GetKey(KeyCode.LeftShift))
-				gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - Time.deltaTime * 1.5f, gameObject.transform.position.z);
-			
+				gameObject.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - Time.deltaTime * 5f, gameObject.transform.position.z);			
+			SendMessage("AllowFlight");
 		}
 	}
 }
