@@ -4,12 +4,20 @@ using System.Collections;
 public class CharCollisionHandler : MonoBehaviour {
 	string state="";
 	void OnControllerColliderHit(ControllerColliderHit hit) {
+		if(hit.collider.gameObject.GetComponent<BlockData>().id == 1)
+			audio.PlayOneShot(Resources.Load("Sounds/Portalfixed", typeof(AudioClip)) as AudioClip);
 		Vector3 pos = hit.collider.transform.position;
 		Blockmechanics.CharacterCollision(pos, hit.collider.gameObject.GetComponent<BlockData>().id);
 		if(hit.collider.gameObject.GetComponent<BlockData>().id == 3)
 		{			
 			Debug.Log("LAUNCH");
 			state = "Launch";
+			audio.PlayOneShot(Resources.Load("Sounds/boing") as AudioClip);
+		}
+		if(hit.collider.gameObject.GetComponent<BlockData>().id == 4)
+		{
+			gameObject.GetComponent<Death>().Die();
+			audio.Play();
 		}
 	}
 	void Update()

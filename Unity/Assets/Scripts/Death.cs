@@ -2,14 +2,18 @@ using UnityEngine;
 using System.Collections;
 
 public class Death : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
 	
+	void Awake()
+	{
+		DontDestroyOnLoad(gameObject);
 	}
-	
-	// Update is called once per frame
+	public void Die () {
+		gameObject.transform.position = new Vector3(0, 3.5f, 0);
+		gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
+	}
+
 	void Update () {
-	
+		if(gameObject.transform.position.y < -25)
+			Die();
 	}
 }
