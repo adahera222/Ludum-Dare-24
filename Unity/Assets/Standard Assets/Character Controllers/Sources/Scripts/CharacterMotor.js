@@ -163,7 +163,7 @@ class CharacterMotorSliding {
 
 var sliding : CharacterMotorSliding = CharacterMotorSliding();
 
-@System.NonSerialized
+
 var grounded : boolean = true;
 
 @System.NonSerialized

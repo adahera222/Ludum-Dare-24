@@ -2,10 +2,14 @@ using UnityEngine;
 using System.Collections;
 
 public class MouseCenter : MonoBehaviour {
-	
+	bool pause = false;
 	// Update is called once per frame
 	void Update () {
-		if(!Input.GetKey(KeyCode.Escape))
+		if(Input.GetKeyDown(KeyCode.Escape))
+		{
+			pause = !pause;
+		}
+		if(!pause)
 		{
 			Screen.lockCursor = true;
 			Screen.lockCursor = false;

@@ -29,10 +29,16 @@ public class MouseLook : MonoBehaviour {
 	public float maximumY = 60F;
 
 	float rotationY = 0F;
+	
+	bool pause = false;
 
 	void Update ()
 	{
-		if(!Input.GetKey(KeyCode.Escape))
+		if(Input.GetKeyDown(KeyCode.Escape))
+		{
+			pause = !pause;
+		}
+		if(!pause)
 		{
 			if (axes == RotationAxes.MouseXAndY)
 			{

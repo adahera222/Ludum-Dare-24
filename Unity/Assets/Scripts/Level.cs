@@ -36,19 +36,23 @@ public class Level : MonoBehaviour {
 	{
 		blocks.Add(new Vector3(0, 0, 0));
 		loadname = levelname;
+		LoadLevel(levelname);
 	}
 	public string levelname = "";
 	private string loadname = "";
 	void OnGUI()
 	{
-		loadname = GUI.TextField(new Rect(0, 0, 200, 20), loadname);
-		if(GUI.Button(new Rect(Screen.width-200, 0, 200, 20), "SAVE"))
+		if(GlobalSettings.LevelDev)
 		{
-			SaveLevel(levelname);
-		}
-		if(GUI.Button(new Rect(Screen.width - 200, 25, 200, 20), "LOAD"))
-		{
-			LoadLevel(loadname);
+			loadname = GUI.TextField(new Rect(0, 0, 200, 20), loadname);
+			if(GUI.Button(new Rect(Screen.width-200, 0, 200, 20), "SAVE"))
+			{
+				SaveLevel(levelname);
+			}
+			if(GUI.Button(new Rect(Screen.width - 200, 25, 200, 20), "LOAD"))
+			{
+				LoadLevel(loadname);
+			}
 		}
 	}
 	void SaveLevel(string name)
