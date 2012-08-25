@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\CUBES\Blockmechanics.cs" />
      <Compile Include="Assets\Scripts\CUBES\Specials\LevelChanger.cs" />
      <Compile Include="Assets\Scripts\CharCollisionHandler.cs" />
+     <Compile Include="Assets\Scripts\Death.cs" />
      <Compile Include="Assets\Scripts\GlobalSettings.cs" />
      <Compile Include="Assets\Scripts\Level.cs" />
      <Compile Include="Assets\Scripts\LevelEditMove.cs" />
