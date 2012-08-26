@@ -1,1 +1,1 @@
-It's just utter nonsense.
+It's just utter nonsense. Mostly.
