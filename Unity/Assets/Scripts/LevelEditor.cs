@@ -27,7 +27,7 @@ public class LevelEditor : MonoBehaviour {
 			if(Input.GetMouseButtonDown(0))
 			{
 				Debug.Log("Left Mouse");
-				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+				Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
 				RaycastHit hit;
 				if(Physics.Raycast(ray, out hit, 10))
 				{
@@ -41,7 +41,7 @@ public class LevelEditor : MonoBehaviour {
 			if(Input.GetMouseButtonDown(1))
 			{
 				Debug.Log("Right Mouse");
-				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+				Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
 				RaycastHit hit;
 				if(Physics.Raycast(ray, out hit, 10))
 				{
