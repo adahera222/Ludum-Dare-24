@@ -8,7 +8,7 @@ public class Death : MonoBehaviour {
 		DontDestroyOnLoad(gameObject);
 	}
 	public void Die () {
-		gameObject.transform.position = new Vector3(0, 3.5f, 0);
+		gameObject.transform.position = new Vector3(0, 1.5f, 0);
 		gameObject.transform.eulerAngles = new Vector3(0, 180, 0);
 	}
 

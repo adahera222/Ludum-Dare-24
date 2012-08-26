@@ -7,8 +7,8 @@ public class Blockmechanics : MonoBehaviour {
 	public delegate void CollisionDelegate(BLOCK block);
 	public delegate void GameTickDelegate(float deltatime, BLOCK block);
 	
-	static CollisionDelegate[] collisionenter = new CollisionDelegate[5];
-	GameTickDelegate[] tick = new GameTickDelegate[5];
+	static CollisionDelegate[] collisionenter = new CollisionDelegate[6];
+	GameTickDelegate[] tick = new GameTickDelegate[6];
 	
 	// Update is called once per frame
 	void FixedUpdate () {

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class LevelEditor : MonoBehaviour {
 	public sbyte selection = 0;
 	const sbyte min = 0;
-	const sbyte max = 4;
+	const sbyte max = 5;
 	void Update()
 	{
 		if(GlobalSettings.LevelDev & !GlobalSettings.pause)

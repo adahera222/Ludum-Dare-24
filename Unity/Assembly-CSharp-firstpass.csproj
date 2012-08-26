@@ -46,6 +46,9 @@
   <ItemGroup>
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterControls.cs" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Utility Scripts\CombineChildren.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Utility Scripts\MeshCombineUtility.cs" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />

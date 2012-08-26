@@ -25,6 +25,14 @@ public class CharCollisionHandler : MonoBehaviour {
 				gameObject.GetComponent<Death>().Die();
 				audio.Play();
 			}
+			if(hit.collider.gameObject.GetComponent<BlockData>().id == 5)
+			{
+				gameObject.GetComponent<CharacterMotor>().iceSliding = true;
+			}
+			else
+			{
+				gameObject.GetComponent<CharacterMotor>().iceSliding = false;
+			}
 		}
 	}
 	void Update()

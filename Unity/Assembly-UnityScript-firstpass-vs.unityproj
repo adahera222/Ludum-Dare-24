@@ -49,6 +49,7 @@
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
+     <Compile Include="Assets\Standard Assets\Scripts\General Scripts\DragRigidbody.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" />

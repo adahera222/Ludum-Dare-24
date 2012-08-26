@@ -6,7 +6,8 @@ public enum Block
 	LevelChanger,
 	Lamp,
 	Bouncer,
-	Electrocuter
+	Electrocuter,
+	Ice
 }
 
 public class BLOCK {

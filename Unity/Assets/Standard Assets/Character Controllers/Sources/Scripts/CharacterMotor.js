@@ -7,6 +7,8 @@ var canControl : boolean = true;
 
 var useFixedUpdate : boolean = true;
 
+var iceSliding : boolean = false;
+
 // For the next variables, @System.NonSerialized tells Unity to not serialize the variable or show it in the inspector view.
 // Very handy for organization!
 
@@ -370,17 +372,25 @@ private function ApplyInputVelocityChange (velocity : Vector3) {
 		desiredVelocity = AdjustGroundVelocityToNormal(desiredVelocity, groundNormal);
 	else
 		velocity.y = 0;
-		
-	if(Mathf.Abs(velocity.x) > Mathf.Abs(desiredVelocity.x))
-	{
-		velocity.x = desiredVelocity.x;
-	}
-	if(Mathf.Abs(velocity.z) > Mathf.Abs(desiredVelocity.z))
-	{
-		velocity.z = desiredVelocity.z;
-	}
-	// Enforce max velocity change
 	var maxVelocityChange : float = GetMaxAcceleration(grounded) * Time.deltaTime;
+	if(!iceSliding)
+	{
+		if(Mathf.Abs(velocity.x) > Mathf.Abs(desiredVelocity.x))
+		{
+			velocity.x = desiredVelocity.x;
+		}
+		if(Mathf.Abs(velocity.z) > Mathf.Abs(desiredVelocity.z))
+		{
+			velocity.z = desiredVelocity.z;
+		}
+	}
+	if(iceSliding)
+	{
+		if(velocity.x + velocity.z > desiredVelocity.x + desiredVelocity.z)
+			maxVelocityChange /= 4.5;
+		else
+			maxVelocityChange /= 2;
+	}
 	var velocityChangeVector : Vector3 = (desiredVelocity - velocity);
 	if (velocityChangeVector.sqrMagnitude > maxVelocityChange * maxVelocityChange) {
 		velocityChangeVector = velocityChangeVector.normalized * maxVelocityChange;
