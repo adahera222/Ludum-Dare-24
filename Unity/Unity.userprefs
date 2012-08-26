@@ -1,20 +1,20 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharCollisionHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js">
     <Files>
       <File FileName="Assets\Scripts\Level.cs" Line="179" Column="10" />
-      <File FileName="Assets\Scripts\LevelEditor.cs" Line="60" Column="22" />
-      <File FileName="Assets\Scripts\CUBES\Specials\LevelChanger.cs" Line="11" Column="26" />
-      <File FileName="Assets\Scripts\CUBES\BLOCK.cs" Line="50" Column="20" />
-      <File FileName="Assets\Scripts\GlobalSettings.cs" Line="17" Column="31" />
+      <File FileName="Assets\Scripts\LevelEditor.cs" Line="9" Column="15" />
+      <File FileName="Assets\Scripts\CUBES\Specials\LevelChanger.cs" Line="17" Column="86" />
+      <File FileName="Assets\Scripts\CUBES\BLOCK.cs" Line="10" Column="5" />
+      <File FileName="Assets\Scripts\GlobalSettings.cs" Line="11" Column="29" />
       <File FileName="Assets\Scripts\LevelEditMove.cs" Line="10" Column="37" />
       <File FileName="Assets\Scripts\MouseCenter.cs" Line="16" Column="33" />
-      <File FileName="Assets\Scripts\CUBES\Blockmechanics.cs" Line="14" Column="12" />
+      <File FileName="Assets\Scripts\CUBES\Blockmechanics.cs" Line="11" Column="50" />
       <File FileName="Assets\Scripts\CUBES\BlockData.cs" Line="9" Column="1" />
-      <File FileName="Assets\Scripts\CharCollisionHandler.cs" Line="54" Column="81" />
-      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" Line="574" Column="2" />
+      <File FileName="Assets\Scripts\CharCollisionHandler.cs" Line="34" Column="65" />
+      <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" Line="392" Column="26" />
       <File FileName="Assets\Scripts\TextureAnimator.cs" Line="23" Column="1" />
-      <File FileName="Assets\Scripts\Death.cs" Line="10" Column="22" />
+      <File FileName="Assets\Scripts\Death.cs" Line="11" Column="51" />
       <File FileName="Assets\Scripts\TitleScreen.cs" Line="4" Column="25" />
       <File FileName="Assets\Scripts\LoadingScreen.cs" Line="1" Column="1" />
     </Files>
