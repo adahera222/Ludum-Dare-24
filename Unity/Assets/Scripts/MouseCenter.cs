@@ -13,6 +13,7 @@ public class MouseCenter : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.Escape))
 		{
 			pause = !pause;
+			GlobalSettings.pause = pause;
 		}
 		if(!pause)
 		{

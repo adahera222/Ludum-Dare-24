@@ -8,7 +8,7 @@ public class LevelEditor : MonoBehaviour {
 	const int max = 4;
 	void Update()
 	{
-		if(GlobalSettings.LevelDev)
+		if(GlobalSettings.LevelDev & !GlobalSettings.pause)
 		{
 			if(Input.GetKeyDown(KeyCode.Q))
 			{

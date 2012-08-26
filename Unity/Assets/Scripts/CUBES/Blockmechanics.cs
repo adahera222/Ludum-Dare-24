@@ -11,7 +11,7 @@ public class Blockmechanics : MonoBehaviour {
 	GameTickDelegate[] tick = new GameTickDelegate[5];
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		BLOCK me = null;
 		Level level = GameObject.FindGameObjectWithTag("Level").GetComponent<Level>();
 		foreach(BLOCK block in level.GetBlocks())

@@ -1,0 +1,7 @@
+* Ice texture and code.
+* Switch texture and code.
+* Weak stone Texture and code
+* Randomly gained character buff that allows to break weak stone to acces bonus areas.
+* Maps and bonus maps.
+* Title,level sellect and pause menus.
+* more content

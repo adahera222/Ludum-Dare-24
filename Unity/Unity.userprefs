@@ -1,21 +1,22 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MouseCenter.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Level.cs">
     <Files>
-      <File FileName="Assets\Scripts\CUBES\BLOCK.cs" Line="9" Column="14" />
-      <File FileName="Assets\Scripts\CUBES\Specials\LevelChanger.cs" Line="15" Column="3" />
-      <File FileName="Assets\Scripts\Level.cs" Line="32" Column="23" />
-      <File FileName="Assets\Scripts\GlobalSettings.cs" Line="14" Column="5" />
-      <File FileName="Assets\Scripts\LevelEditor.cs" Line="44" Column="16" />
+      <File FileName="Assets\Scripts\Level.cs" Line="120" Column="18" />
+      <File FileName="Assets\Scripts\LevelEditor.cs" Line="11" Column="49" />
+      <File FileName="Assets\Scripts\CUBES\Specials\LevelChanger.cs" Line="17" Column="87" />
+      <File FileName="Assets\Scripts\CUBES\BLOCK.cs" Line="61" Column="54" />
+      <File FileName="Assets\Scripts\GlobalSettings.cs" Line="7" Column="15" />
       <File FileName="Assets\Scripts\LevelEditMove.cs" Line="10" Column="37" />
-      <File FileName="Assets\Scripts\MouseCenter.cs" Line="32" Column="79" />
-      <File FileName="Assets\Scripts\CUBES\Blockmechanics.cs" Line="49" Column="52" />
-      <File FileName="Assets\Scripts\CUBES\BlockData.cs" Line="6" Column="22" />
-      <File FileName="Assets\Scripts\CharCollisionHandler.cs" Line="15" Column="67" />
+      <File FileName="Assets\Scripts\MouseCenter.cs" Line="16" Column="33" />
+      <File FileName="Assets\Scripts\CUBES\Blockmechanics.cs" Line="14" Column="12" />
+      <File FileName="Assets\Scripts\CUBES\BlockData.cs" Line="7" Column="23" />
+      <File FileName="Assets\Scripts\CharCollisionHandler.cs" Line="11" Column="4" />
       <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" Line="574" Column="2" />
-      <File FileName="Assets\Scripts\TextureAnimator.cs" Line="27" Column="12" />
+      <File FileName="Assets\Scripts\TextureAnimator.cs" Line="23" Column="1" />
       <File FileName="Assets\Scripts\Death.cs" Line="10" Column="22" />
       <File FileName="Assets\Scripts\TitleScreen.cs" Line="4" Column="25" />
+      <File FileName="Assets\Scripts\LoadingScreen.cs" Line="27" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

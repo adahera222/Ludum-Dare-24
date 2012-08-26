@@ -10,29 +10,18 @@ public class Level : MonoBehaviour {
 	public void AddBlock(Vector3 pos)
 	{
 		Debug.Log("Adding default block at " + pos.ToString());
-		blocks.Add(new BLOCK(pos));
-		GameObject go = (GameObject)GameObject.Instantiate(GlobalSettings.idtable[0], pos, Quaternion.identity);
-		go.AddComponent<Blockmechanics>();
-		go.GetComponent<BlockData>().id = 0;
-		go.GetComponent<BlockData>().metadata = 0;
+		blocks.Add(new BLOCK(pos));		
 	}
 	public void AddBlock(Vector3 pos, int id)
 	{
 		Debug.Log("Adding block " + ((Block)id).ToString() + " at " + pos.ToString());
 		blocks.Add(new BLOCK(id, pos));
-		GameObject go = (GameObject)GameObject.Instantiate(GlobalSettings.idtable[id], pos, Quaternion.identity);
-		go.AddComponent<Blockmechanics>();
-		go.GetComponent<BlockData>().id = id;
-		go.GetComponent<BlockData>().metadata = 0;
+		
 	}
 	public void AddBlock(Vector3 pos, int id, int metadata)
 	{
 		Debug.Log("Adding block " + ((Block)id).ToString() + " at " + pos.ToString() + " with metadata " + metadata);
 		blocks.Add(new BLOCK(id, pos, metadata));
-		GameObject go = (GameObject)GameObject.Instantiate(GlobalSettings.idtable[id], pos, Quaternion.identity);
-		go.AddComponent<Blockmechanics>();
-		go.GetComponent<BlockData>().id = id;
-		go.GetComponent<BlockData>().metadata = metadata;
 	}
 	public void RemoveBlock(Vector3 pos, GameObject gameobj)
 	{
@@ -57,7 +46,7 @@ public class Level : MonoBehaviour {
 	{
 		blocks.Add(new BLOCK(new Vector3(0, 0, 0)));
 		loadname = levelname;
-		LoadLevel(levelname);
+		StartCoroutine(LoadLevel(levelname));
 	}
 	public string levelname = "";
 	private string loadname = "";
@@ -72,7 +61,7 @@ public class Level : MonoBehaviour {
 			}
 			if(GUI.Button(new Rect(Screen.width - 200, 25, 200, 20), "LOAD"))
 			{
-				LoadLevel(loadname);
+				StartCoroutine(LoadLevel(loadname));
 			}
 		}
 	}
@@ -98,7 +87,7 @@ public class Level : MonoBehaviour {
 			}
 		}
 	}
-	void LoadLevel(string name)
+	IEnumerator LoadLevel(string name)
 	{
 		Debug.Log("Starting to load level");
 		using(FileStream stream = File.Open("Levels/"+name, FileMode.Open))
@@ -118,19 +107,33 @@ public class Level : MonoBehaviour {
 				try
 				{
 					Debug.Log("reading");
-					while(true)
+					int cnt = 0;
+					while(reader.PeekChar() != -1)
 					{
 						int id = reader.ReadInt32();
 						int metadata = reader.ReadInt32();
 						int x = reader.ReadInt32();
 						int y = reader.ReadInt32();
 						int z = reader.ReadInt32();
+						cnt++;
 						AddBlock(new Vector3(x,y,z), id, metadata);
+						if(cnt > 25)
+						{
+							cnt = 0;
+							yield return new WaitForEndOfFrame();
+						}
 					}
 				}
-				catch
-				{}
+				finally
+				{
+					OnLoad();
+				}
 			}
 		}
+	}
+	void OnLoad()
+	{
+		GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMotor>().movement.gravity = 20;
+		GameObject.FindGameObjectWithTag("LoadScreen").GetComponent<LoadingScreen>().Stop();
 	}
 }

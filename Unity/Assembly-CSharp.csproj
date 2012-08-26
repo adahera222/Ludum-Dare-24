@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Level.cs" />
      <Compile Include="Assets\Scripts\LevelEditMove.cs" />
      <Compile Include="Assets\Scripts\LevelEditor.cs" />
+     <Compile Include="Assets\Scripts\LoadingScreen.cs" />
      <Compile Include="Assets\Scripts\MouseCenter.cs" />
      <Compile Include="Assets\Scripts\TextureAnimator.cs" />
      <Compile Include="Assets\Scripts\TitleScreen.cs" />
