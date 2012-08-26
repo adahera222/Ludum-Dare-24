@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class LevelEditor : MonoBehaviour {
-	public int selection = 0;
-	const int min = 0;
-	const int max = 4;
+	public sbyte selection = 0;
+	const sbyte min = 0;
+	const sbyte max = 4;
 	void Update()
 	{
 		if(GlobalSettings.LevelDev & !GlobalSettings.pause)
@@ -56,7 +56,7 @@ public class LevelEditor : MonoBehaviour {
 				}
 			}
 			//Debug.Log(Input.GetAxis("Mouse ScrollWheel").ToString());
-			selection += (int)(Input.GetAxis("Mouse ScrollWheel") * 10);
+			selection += (sbyte)(Input.GetAxis("Mouse ScrollWheel") * 10);
 				if(selection > max)
 					selection = min;
 				if(selection < min)

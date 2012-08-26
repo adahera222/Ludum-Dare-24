@@ -4,6 +4,7 @@ using System.Collections;
 public class CharCollisionHandler : MonoBehaviour {
 	string state="";
 	Vector3 LaunchNormals;
+	int Launchpower;
 	void OnControllerColliderHit(ControllerColliderHit hit) {
 		if(!GlobalSettings.LevelDev)
 		{
@@ -17,6 +18,7 @@ public class CharCollisionHandler : MonoBehaviour {
 				state = "Launch";
 				audio.PlayOneShot(Resources.Load("Sounds/boing") as AudioClip);
 				LaunchNormals = hit.normal;
+				Launchpower = hit.collider.gameObject.GetComponent<BlockData>().metadata;
 			}
 			if(hit.collider.gameObject.GetComponent<BlockData>().id == 4)
 			{
@@ -36,11 +38,11 @@ public class CharCollisionHandler : MonoBehaviour {
 	void Launch()
 	{
 		CharacterController charctrl = gameObject.GetComponent<CharacterController>();
-		float movefactor = Time.deltaTime * 50f;
+		float movefactor = Time.deltaTime * Launchpower * 6f;
 		charctrl.Move(LaunchNormals * movefactor);
 		charctrl.gameObject.GetComponent<CharacterMotor>().movement.gravity = 0;
 		cnt += movefactor;
-		if(cnt >= 8)
+		if(cnt >= Launchpower)
 		{
 		charctrl.gameObject.GetComponent<CharacterMotor>().movement.gravity = 10;
 		cnt = 0;
@@ -50,9 +52,6 @@ public class CharCollisionHandler : MonoBehaviour {
 	void Land()
 	{
 		CharacterController charctrl = gameObject.GetComponent<CharacterController>();
-		float movefactor = Time.deltaTime * 2f;
-		charctrl.Move(LaunchNormals * movefactor);
-		charctrl.Move(new Vector3(0, movefactor / 5, 0));
 		if(gameObject.GetComponent<CharacterMotor>().grounded)
 		{
 			state="";

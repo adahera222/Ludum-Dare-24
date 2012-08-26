@@ -10,7 +10,7 @@ public enum Block
 }
 
 public class BLOCK {
-	public int id;
+	public sbyte id;
 	public int metadata;
 	public Vector3 pos;
 	public int reference;
@@ -34,7 +34,7 @@ public class BLOCK {
 		this.obj = go;
 		go.GetComponent<BlockData>().reference = reference;
 	}
-	public BLOCK(int id, Vector3 position)
+	public BLOCK(sbyte id, Vector3 position)
 	{
 		this.pos = position;
 		this.id = id;
@@ -47,7 +47,7 @@ public class BLOCK {
 		this.obj = go;
 		go.GetComponent<BlockData>().reference = reference;
 	}
-	public BLOCK(int id, Vector3 position, int metadata)
+	public BLOCK(sbyte id, Vector3 position, int metadata)
 	{
 		this.pos = position;
 		this.id = id;
