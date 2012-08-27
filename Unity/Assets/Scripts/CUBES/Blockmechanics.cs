@@ -7,11 +7,14 @@ public class Blockmechanics : MonoBehaviour {
 	public delegate void CollisionDelegate(BLOCK block);
 	public delegate void GameTickDelegate(float deltatime, BLOCK block);
 	
-	static CollisionDelegate[] collisionenter = new CollisionDelegate[6];
-	GameTickDelegate[] tick = new GameTickDelegate[6];
+	static CollisionDelegate[] collisionenter = new CollisionDelegate[7];
+	GameTickDelegate[] tick = new GameTickDelegate[7];
 	
-	// Update is called once per frame
-	void FixedUpdate () {
+	void Start()
+	{
+		InvokeRepeating("Tick", 0, 15);
+	}
+	void Tick () {
 		BLOCK me = null;
 		Level level = GameObject.FindGameObjectWithTag("Level").GetComponent<Level>();
 		foreach(BLOCK block in level.GetBlocks())

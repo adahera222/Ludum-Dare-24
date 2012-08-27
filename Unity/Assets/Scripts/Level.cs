@@ -85,24 +85,29 @@ public class Level : MonoBehaviour {
 	}
 	void Start()
 	{
-		blocks.Add(new BLOCK(new Vector3(0, 0, 0)));
-		loadname = levelname;
-		StartCoroutine(LoadLevel(levelname));
+        if (GameObject.FindGameObjectWithTag("Level").GetComponent<Level>().levelname == "LVL1")
+        {
+            blocks.Add(new BLOCK(new Vector3(0, 0, 0)));
+            StartCoroutine(LoadLevel(levelname));
+        }
 	}
+    public void StartLoading()
+    {
+        StartCoroutine(LoadLevel(levelname));
+    }
 	public string levelname = "";
-	private string loadname = "";
 	void OnGUI()
 	{
 		if(GlobalSettings.LevelDev)
 		{
-			loadname = GUI.TextField(new Rect(0, 0, 200, 20), loadname);
+			levelname = GUI.TextField(new Rect(0, 0, 200, 20), levelname);
 			if(GUI.Button(new Rect(Screen.width-200, 0, 200, 20), "SAVE"))
 			{
 				SaveLevel(levelname);
 			}
 			if(GUI.Button(new Rect(Screen.width - 200, 25, 200, 20), "LOAD"))
 			{
-				StartCoroutine(LoadLevel(loadname));
+				StartCoroutine(LoadLevel(levelname));
 			}
 		}
 	}
@@ -319,6 +324,7 @@ public class Level : MonoBehaviour {
 	void OnLoad()
 	{
 		GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMotor>().movement.gravity = 20;
-		GameObject.FindGameObjectWithTag("LoadScreen").GetComponent<LoadingScreen>().Stop();
+        GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3(0, 1.5f, 0);
+		GameObject.FindGameObjectWithTag("LoadScreen").GetComponent<LoadingScreen>().Stop();       
 	}
 }

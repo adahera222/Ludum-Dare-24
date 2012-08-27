@@ -1,0 +1,270 @@
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [aticfx32.dll 8.17.10.1099]
+    Renderer: AMD Radeon(TM) HD 6380G
+    Vendor:   ATI
+    VRAM:     1259 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=1 DF24=1 INTZ=1 RAWZ=0 NULL=1 RESZ=1 SlowINTZ=1
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Initialize engine version: 3.5.5f3
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Rao Zvorovski\Ludum24\Build\Ludum_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Rao Zvorovski\Ludum24\Build\Ludum_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Rao Zvorovski\Ludum24\Build\Ludum_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Rao Zvorovski\Ludum24\Build\Ludum_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Rao Zvorovski\Ludum24\Build\Ludum_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Rao Zvorovski\Ludum24\Build\Ludum_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Rao Zvorovski\Ludum24\Build\Ludum_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\Rao Zvorovski\Ludum24\Build\Ludum_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Rao Zvorovski\Ludum24\Build\Ludum_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Rao Zvorovski\Ludum24\Build\Ludum_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.107 seconds
+Starting to load level
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+44
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+0.02584878
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Platform assembly: C:\Users\Rao Zvorovski\Ludum24\Build\Ludum_Data\Managed\Boo.Lang.dll (this message is harmless)
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 297. Operation took 10.086814 ms.
+Starting to load level
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+263
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+0.06145287
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 291. Operation took 9.732900 ms.
+Starting to load level
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+146
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+0.01768494
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 70 unused Assets to reduce memory usage. Loaded Objects now: 297. Operation took 10.410522 ms.
+Starting to load level
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+263
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+0.09157944
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 297. Operation took 11.397604 ms.
+Starting to load level
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+46
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+0.006679535
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 297. Operation took 10.032102 ms.
+Starting to load level
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+263
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+0.06430054
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 297. Operation took 10.314777 ms.
+Starting to load level
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+397
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+0.1307449
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 297. Operation took 9.438258 ms.
+Starting to load level
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+263
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+0.05770874
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 297. Operation took 9.751707 ms.
+Starting to load level
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+46
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+0.007675171
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 297. Operation took 9.539701 ms.
+Starting to load level
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+263
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+0.06324005
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+LAUNCH
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 299. Operation took 8.476822 ms.
+Starting to load level
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+397
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+0.1295624
+ 
+(Filename: C:/BuildAgent/work/d9c061b1c154f5ae/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+

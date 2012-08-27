@@ -386,10 +386,10 @@ private function ApplyInputVelocityChange (velocity : Vector3) {
 	}
 	if(iceSliding)
 	{
-		if(velocity.x + velocity.z > desiredVelocity.x + desiredVelocity.z)
-			maxVelocityChange /= 4.5;
+		if(velocity.x + velocity.y > desiredVelocity.x + desiredVelocity.z)
+			maxVelocityChange /= 1.5;
 		else
-			maxVelocityChange /= 2;
+			maxVelocityChange /= 6;
 	}
 	var velocityChangeVector : Vector3 = (desiredVelocity - velocity);
 	if (velocityChangeVector.sqrMagnitude > maxVelocityChange * maxVelocityChange) {

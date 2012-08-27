@@ -7,7 +7,8 @@ public enum Block
 	Lamp,
 	Bouncer,
 	Electrocuter,
-	Ice
+	Ice,
+	Cloack
 }
 
 public class BLOCK {
