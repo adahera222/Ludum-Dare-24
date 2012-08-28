@@ -27,7 +27,10 @@ public class LevelChanger : MonoBehaviour {
         int type = meta % 10;
         CurMsgData.type = (TeleportType)type;
         string name = GameObject.FindGameObjectWithTag("Level").GetComponent<Level>().levelname;
-         CurMsgData.sender = name.Substring(0, name.Length - 1);
+        if (name == "Hub")
+            CurMsgData.sender = "Hub";
+        else
+            CurMsgData.sender = "Mission";
         string levelname = LevelName[(meta / 10) - (meta / 100) * 10];
         switch (levelname)
         {

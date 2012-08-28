@@ -130,7 +130,9 @@ public class CharCollisionHandler : MonoBehaviour {
     {
         CharacterController charctrl = gameObject.GetComponent<CharacterController>();
         float timepercentage = (Speedpower - (Time.time - speedstart)) / Speedpower;
-        charctrl.Move(Initialspeed * Speedpower * timepercentage * Time.deltaTime);
+        Vector3 movement = Initialspeed * Speedpower * timepercentage * Time.deltaTime;
+        if(movement != Vector3.zero)
+            charctrl.Move(movement);
         if (Time.time - speedstart >= Speedpower)
             state2 = "";
     }
