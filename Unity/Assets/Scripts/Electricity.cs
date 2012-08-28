@@ -32,15 +32,18 @@ public class Electricity : MonoBehaviour {
             if(gameObject.GetComponent<BlockData>().id == 4)
                 SendMessage("ElectricityToggle");
             if(connections == null)
-            {
+            {                
                 connections = new List<GameObject>();
                 foreach (GameObject go in BLOCK.electrics)
                 {
-                    float dist = Vector3.Distance(gameObject.transform.position, go.transform.position);
-                    if(dist >  0.5f && dist < 1.5f)
+                    if (go != null)
                     {
-                        connections.Add(go);                        
-                        go.GetComponent<Electricity>().Toggle(pulseid);
+                        float dist = Vector3.Distance(gameObject.transform.position, go.transform.position);
+                        if (dist > 0.5f && dist < 1.5f)
+                        {
+                            connections.Add(go);
+                            go.GetComponent<Electricity>().Toggle(pulseid);
+                        }
                     }
                 }
             }

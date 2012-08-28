@@ -88,6 +88,22 @@ public class Level : MonoBehaviour {
 	{
         if (GameObject.FindGameObjectWithTag("Level").GetComponent<Level>().levelname == "LVL1")
         {
+            if (PlayerPrefs.HasKey("Mission"))
+            {
+                Stats stats = GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>();
+                stats.MissionLevel = PlayerPrefs.GetInt("Mission");
+                stats.maxspeedmodifier = PlayerPrefs.GetFloat("maxspeedmodifier");
+                stats.accelerationmodifier = PlayerPrefs.GetFloat("accelerationmodifier");
+                stats.JumpHeight = PlayerPrefs.GetFloat("JumpHeight");
+                stats.JumpDistance = PlayerPrefs.GetFloat("JumpDistance");
+                stats.Set();
+                Application.LoadLevel("Hub");
+            }
+            blocks.Add(new BLOCK(new Vector3(0, 0, 0)));
+            StartCoroutine(LoadLevel(levelname));
+        }
+        else if (GameObject.FindGameObjectWithTag("Level").GetComponent<Level>().levelname == "Complete")
+        {
             blocks.Add(new BLOCK(new Vector3(0, 0, 0)));
             StartCoroutine(LoadLevel(levelname));
         }
@@ -218,7 +234,7 @@ public class Level : MonoBehaviour {
 	IEnumerator LoadLevel(string name)
 	{
 		GameObject[] gameobjects = GameObject.FindGameObjectsWithTag("CUBE");
-		
+        BLOCK.electrics = new List<GameObject>();
 		int maxX = 0;
 		int minX = 0;
 		int maxY = 0;

@@ -2,10 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class Stats : MonoBehaviour {
-    public int IceLevel = 1;
-    public int BounceLevel = 1;
-    public int JumpLevel = 1;
-    public int PuzzleLevel = 1;
+    public int MissionLevel = 1;
     public float maxspeedmodifier = 1;
     public float accelerationmodifier = 1;
     public float JumpHeight = 1;
@@ -20,9 +17,17 @@ public class Stats : MonoBehaviour {
             JumpHeight += 0.1f;
         }
         CharacterMotor motor = gameObject.GetComponent<CharacterMotor>();
-        motor.movement.maxGroundAcceleration *= accelerationmodifier;
-        motor.movement.maxForwardSpeed *= maxspeedmodifier;
-        motor.jumping.baseHeight *= JumpHeight;
+        motor.movement.maxGroundAcceleration = 10* accelerationmodifier;
+        motor.movement.maxForwardSpeed = 6* maxspeedmodifier;
+        motor.jumping.baseHeight = JumpHeight;
         motor.jumping.perpAmount = JumpDistance;
+    }
+    public void Reset()
+    {
+       maxspeedmodifier = 1;
+        accelerationmodifier = 1;
+        JumpHeight = 1;
+        JumpDistance = 1;
+        Set();
     }
 }

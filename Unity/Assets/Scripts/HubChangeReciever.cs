@@ -7,22 +7,15 @@ public class HubChangeReciever : MonoBehaviour {
         GameObject message = GameObject.FindGameObjectWithTag("Message");
         if (message != null)
         {
+            Debug.Log("Recieved message");            
             if (message.GetComponent<LevelchangerMessage>().type == TeleportType.Complete)
             {
+                Debug.Log(message.GetComponent<LevelchangerMessage>().sender);
                 Stats stats = GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>();
                 switch (message.GetComponent<LevelchangerMessage>().sender)
                 {
-                    case "Jump":
-                        stats.JumpLevel++;
-                        break;
-                    case "Bounce":
-                        stats.BounceLevel++;
-                        break;
-                    case "Ice":
-                        stats.IceLevel++;
-                        break;
-                    case "Puzzle":
-                        stats.PuzzleLevel++;
+                    case "Mission":
+                        stats.MissionLevel++;
                         break;
                 }
             }

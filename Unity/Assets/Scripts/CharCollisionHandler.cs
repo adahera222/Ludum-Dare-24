@@ -28,12 +28,15 @@ public class CharCollisionHandler : MonoBehaviour {
                         int pulseid = Electricity.GetPulseId();
                         foreach (GameObject go in BLOCK.electrics)
                         {
-                            float dist = Vector3.Distance(hit.transform.position, go.transform.position);
-                            if (dist > 0.5f && dist < 1.5f)
+                            if (go != null)
                             {
-                                //Debug.Log(go.transform.position.ToString());
-                                // connections.Add(go);
-                                go.GetComponent<Electricity>().Toggle(pulseid);
+                                float dist = Vector3.Distance(hit.transform.position, go.transform.position);
+                                if (dist > 0.5f && dist < 1.5f)
+                                {
+                                    //Debug.Log(go.transform.position.ToString());
+                                    // connections.Add(go);
+                                    go.GetComponent<Electricity>().Toggle(pulseid);
+                                }
                             }
                         }
                     }

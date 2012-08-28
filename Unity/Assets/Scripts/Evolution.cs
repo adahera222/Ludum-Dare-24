@@ -14,9 +14,12 @@ public class Evolution : MonoBehaviour {
         block = _block;
         GameObject player = gameObject;
         int deathcount = player.GetComponent<Death>().DeathCount;
-        int rand = Random.Range(0, 100 + deathcount);
+        int rand = Random.Range(0, 50 + deathcount * 5);
+        deathcount = 0;
         Stats stats = player.GetComponent<Stats>();
         time = Time.time;
+        if (Application.loadedLevelName == "Hub")
+            LevelChanger.CollisionHandler(_block);
         switch(rand)
         {
             case 0:
@@ -24,7 +27,7 @@ public class Evolution : MonoBehaviour {
                 Text = "YOU HAVE EVOLVED!\n\nYou now run faster.";
                 break;
             case 1:
-                stats.maxspeedmodifier += 0.15f;
+                stats.maxspeedmodifier += 0.05f;
                 Text = "YOU HAVE EVOLVED!\n\nYou now run faster.";
                 break;
             case 2:

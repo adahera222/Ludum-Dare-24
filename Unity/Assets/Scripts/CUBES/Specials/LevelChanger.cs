@@ -31,25 +31,14 @@ public class LevelChanger : MonoBehaviour {
         string levelname = LevelName[(meta / 10) - (meta / 100) * 10];
         switch (levelname)
         {
-            case "Ice":
-                CurMsgData.data = stats.IceLevel;
-                if (stats.IceLevel > GlobalSettings.Ices)
-                    levelname = "Hub";
-                break;
-            case "Jump":
-                CurMsgData.data = stats.JumpLevel;
-                if (stats.JumpLevel > GlobalSettings.Jumps)
-                    levelname = "Hub";
-                break;
-            case "Bounce":
-                CurMsgData.data = stats.BounceLevel;
-                if (stats.BounceLevel > GlobalSettings.Bounces)
-                    levelname = "Hub";
-                break;
-            case "Puzzle":
-                CurMsgData.data = stats.PuzzleLevel;
-                if (stats.PuzzleLevel > GlobalSettings.Puzzles)
-                    levelname = "Hub";
+            case "Mission":
+                CurMsgData.data = stats.MissionLevel;
+                if (stats.MissionLevel > GlobalSettings.Missions)
+                {
+                    Debug.Log("COMPLETE");
+                    Application.LoadLevel("Complete");
+                    return;
+                }
                 break;
         }        
         //Debug.Log(((meta / 10) - (meta / 100) * 10));
