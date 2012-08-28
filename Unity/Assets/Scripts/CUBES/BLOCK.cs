@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 public enum Block
 {
 	BaseBlock,
@@ -8,10 +9,14 @@ public enum Block
 	Bouncer,
 	Electrocuter,
 	Ice,
-	Cloack
+	Cloack,
+    Speed,
+    Wire,
+    Switch
 }
 
 public class BLOCK {
+    public static List<GameObject> electrics = new List<GameObject>();
 	public sbyte id;
 	public int metadata;
 	public Vector3 pos;
@@ -42,6 +47,8 @@ public class BLOCK {
 		this.id = id;
 		this.metadata = 0;
 		GameObject go = (GameObject)GameObject.Instantiate(GlobalSettings.idtable[id], position, Quaternion.identity);
+        if (id == 4 || id == 8)
+            electrics.Add(go);
 		go.AddComponent<Blockmechanics>();
 		go.GetComponent<BlockData>().id = id;
 		go.GetComponent<BlockData>().metadata = 0;
@@ -56,6 +63,8 @@ public class BLOCK {
 		this.metadata = metadata;
 		GameObject go = (GameObject)GameObject.Instantiate(GlobalSettings.idtable[id], pos, Quaternion.identity);
 		go.AddComponent<Blockmechanics>();
+        if (id == 4 || id == 8)
+            electrics.Add(go);
 		go.GetComponent<BlockData>().id = id;
 		go.GetComponent<BlockData>().metadata = metadata;
 		this.reference = GetNewReference();

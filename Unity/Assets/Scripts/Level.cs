@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.IO;
 
 public class Level : MonoBehaviour {
-	
+
+
 	private List<BLOCK> blocks=new List<BLOCK>();
 	/*private int maxX = 0;
 	private int minX = 0;
@@ -98,7 +99,7 @@ public class Level : MonoBehaviour {
 	public string levelname = "";
 	void OnGUI()
 	{
-		if(GlobalSettings.LevelDev)
+		if(GlobalSettings.LevelDev || Application.loadedLevelName == "Test")
 		{
 			levelname = GUI.TextField(new Rect(0, 0, 200, 20), levelname);
 			if(GUI.Button(new Rect(Screen.width-200, 0, 200, 20), "SAVE"))

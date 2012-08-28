@@ -8,6 +8,7 @@ var canControl : boolean = true;
 var useFixedUpdate : boolean = true;
 
 var iceSliding : boolean = false;
+var velocitymultiplier : int = 0;
 
 // For the next variables, @System.NonSerialized tells Unity to not serialize the variable or show it in the inspector view.
 // Very handy for organization!
@@ -298,10 +299,11 @@ private function UpdateFunction () {
 		grounded = true;
 		jumping.jumping = false;
 		SubtractNewPlatformVelocity();
-		movement.velocity *= 0.3;
-		
+		movement.velocity *= 0.3;		
 		SendMessage("OnLand", SendMessageOptions.DontRequireReceiver);
 	}
+
+    //movement.velocity *= velocitymultiplier;
 	
 	// Moving platforms support
 	if (MoveWithPlatform()) {

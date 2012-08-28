@@ -12,9 +12,13 @@ public class LevelChangeReciever : MonoBehaviour {
             Debug.Log("Message recieved");
             GameObject level = GameObject.FindGameObjectWithTag("Level");
             Level leveldata = level.GetComponent<Level>();
+            Debug.Log(leveldata.levelname);
             LevelchangerMessage messagedata = message.GetComponent<LevelchangerMessage>();
             leveldata.levelname += messagedata.data.ToString();
+            Debug.Log(messagedata.data);
+            Debug.Log(leveldata.levelname);
             leveldata.StartLoading();
+            Destroy(message);
         }
 	}
 }

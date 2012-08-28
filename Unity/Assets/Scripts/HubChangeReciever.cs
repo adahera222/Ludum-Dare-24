@@ -26,10 +26,11 @@ public class HubChangeReciever : MonoBehaviour {
                         break;
                 }
             }
+            DestroyImmediate(message);
         }
-        DestroyImmediate(message);
         GameObject level = GameObject.FindGameObjectWithTag("Level");
         Level leveldata = level.GetComponent<Level>();
+        leveldata.levelname = "Hub";
         leveldata.StartLoading();
 	}
 }

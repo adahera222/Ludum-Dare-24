@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class LevelEditor : MonoBehaviour {
 	public sbyte selection = 0;
 	const sbyte min = 0;
-	const sbyte max = 6;
+	const sbyte max = 9;
 	void Update()
 	{
 		if(GlobalSettings.LevelDev & !GlobalSettings.pause)
@@ -45,7 +45,7 @@ public class LevelEditor : MonoBehaviour {
 				RaycastHit hit;
 				if(Physics.Raycast(ray, out hit, 10))
 				{
-					if(hit.collider.gameObject.tag == "CUBE")
+                    if (hit.collider.gameObject.tag == "CUBE" || hit.collider.gameObject.tag == "ELECTRIC")
 					{
 						Debug.Log("Hit CUBE");
 						Vector3 newcube = hit.collider.transform.position + hit.normal;
@@ -64,15 +64,29 @@ public class LevelEditor : MonoBehaviour {
 		}
 	}
 	string metadata = "0";
-	void OnGUI()
-	{
-		if(GlobalSettings.LevelDev)
-		{
-			GUI.Label(new Rect(0, Screen.height - 20, 200, 20), ((Block)(selection)).ToString());
-			metadata = GUI.TextField(new Rect(Screen.width - 200, Screen.height - 20, 200, 20), metadata);
-			int hold;
-			if(int.TryParse(metadata, out hold))
-				GUI.Label(new Rect(Screen.width - 200, Screen.height - 45, 200, 20), "CORRECT");
-		}
-	}
+    bool Test = false;
+    void OnGUI()
+    {
+        if (GlobalSettings.LevelDev)
+        {
+            GUI.Label(new Rect(0, Screen.height - 20, 200, 20), ((Block)(selection)).ToString());
+            metadata = GUI.TextField(new Rect(Screen.width - 200, Screen.height - 20, 200, 20), metadata);
+            int hold;
+            if (int.TryParse(metadata, out hold))
+                GUI.Label(new Rect(Screen.width - 200, Screen.height - 45, 200, 20), "CORRECT");
+            if (GUI.Button(new Rect(10, Screen.height - 75, 200, 20), "TEST"))
+            {
+                Destroy(GameObject.FindGameObjectWithTag("Player"));
+                Application.LoadLevel("Test");
+            }
+        }
+        if (Application.loadedLevelName == "Test")
+        {
+            if (GUI.Button(new Rect(10, Screen.height - 75, 200, 20), "STOP"))
+            {
+                Destroy(GameObject.FindGameObjectWithTag("Player"));
+                Application.LoadLevel("LevelEditor");
+            }
+        }
+    }
 }

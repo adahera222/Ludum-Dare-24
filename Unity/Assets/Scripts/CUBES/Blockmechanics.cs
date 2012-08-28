@@ -5,16 +5,16 @@ using System.Collections.Generic;
 public class Blockmechanics : MonoBehaviour {
 	
 	public delegate void CollisionDelegate(BLOCK block);
-	public delegate void GameTickDelegate(float deltatime, BLOCK block);
+	public delegate void GameTickDelegate(BLOCK block);
 	
-	static CollisionDelegate[] collisionenter = new CollisionDelegate[7];
-	GameTickDelegate[] tick = new GameTickDelegate[7];
+	static CollisionDelegate[] collisionenter = new CollisionDelegate[10];
+	GameTickDelegate[] tick = new GameTickDelegate[10];
 	
 	void Start()
 	{
 		InvokeRepeating("Tick", 0, 15);
 	}
-	void Tick () {
+	public void Tick () {
 		BLOCK me = null;
 		Level level = GameObject.FindGameObjectWithTag("Level").GetComponent<Level>();
 		foreach(BLOCK block in level.GetBlocks())
@@ -27,7 +27,7 @@ public class Blockmechanics : MonoBehaviour {
 		}
 		GameTickDelegate tickdel = tick[gameObject.GetComponent<BlockData>().id];
 		if(tickdel != null)
-			tickdel(Time.deltaTime, me);
+			tickdel(me);
 	}
 	public static void CharacterCollision(Vector3 pos, int id)
 	{
@@ -49,18 +49,18 @@ public class Blockmechanics : MonoBehaviour {
 	
 	void Awake()
 	{
-		collisionenter[1] = LevelChanger.CollisionHandler;
+		//collisionenter[1] = LevelChanger.CollisionHandler;
 		tick[2] = SetMetadataRotation;
-		
+        tick[4] = gameObject.GetComponent<Electrocuter>().Tick;
 	}
 	
 	
 	
-	void SetMetadataRotation(float f, BLOCK B)
+	void SetMetadataRotation(BLOCK block)
 	{
 		if(gameObject == null)
 			return;
-		switch(gameObject.GetComponent<BlockData>().metadata - (int)(B.metadata / 10f)*10)
+		switch(gameObject.GetComponent<BlockData>().metadata - (int)(block.metadata / 10f)*10)
 		{
 		case 0:
 			break;
