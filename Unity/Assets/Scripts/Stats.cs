@@ -11,9 +11,9 @@ public class Stats : MonoBehaviour {
 
     public void Set()
     {
-        if (JumpDistance > 45)
+        if (JumpDistance > 0.5f)
         {
-            JumpDistance = 45;
+            JumpDistance = 0.5f;
             JumpHeight += 0.1f;
         }
         CharacterMotor motor = gameObject.GetComponent<CharacterMotor>();

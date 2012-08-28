@@ -51,20 +51,20 @@ public class Evolution : MonoBehaviour {
                 Text = "YOU HAVE EVOLVED!\n\nYou now jump further away.";
                 break;
             case 7:
-                stats.JumpDistance += 2f;
+                stats.JumpDistance += 0.02f;
                 Text = "YOU HAVE EVOLVED!\n\nYou now jump further away.";
                 break;
             case 8:
-                stats.JumpDistance += 5f;
+                stats.JumpDistance += 0.05f;
                 Text = "YOU HAVE EVOLVED!\n\nYou now jump further away.";
                 break;
             case 9:
                 stats.maxspeedmodifier += 0.1f;
-                stats.JumpHeight += 0.2f;
+                stats.JumpHeight += 0.02f;
                 Text = "YOU HAVE EVOLVED!\n\nYou now run faster and jump higher.";
                 break;
             case 10:
-                stats.JumpDistance += 5f;
+                stats.JumpDistance += 0.05f;
                 stats.JumpHeight += 0.3f;
                 stats.maxspeedmodifier += 0.05f;
                 Text = "YOU HAVE EVOLVED!\n\nYou now run faster and\n jump higher and further away.";

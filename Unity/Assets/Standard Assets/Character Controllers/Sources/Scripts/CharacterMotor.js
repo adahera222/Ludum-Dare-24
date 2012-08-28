@@ -462,9 +462,9 @@ private function ApplyGravityAndJumping (velocity : Vector3) {
 			
 			// Calculate the jumping direction
 			if (TooSteep())
-				jumping.jumpDir = Vector3.Slerp(Vector3.up, groundNormal, jumping.steepPerpAmount);
+				jumping.jumpDir = Vector3.up;
 			else
-				jumping.jumpDir = Vector3.Slerp(Vector3.up, groundNormal, jumping.perpAmount);
+				jumping.jumpDir = Vector3.up;
 			
 			// Apply the jumping force to the velocity. Cancel any vertical velocity first.
 			velocity.y = 0;
