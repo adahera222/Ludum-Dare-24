@@ -56,7 +56,6 @@ public class CharCollisionHandler : MonoBehaviour {
                     }
                 }
                 gameObject.transform.position = new Vector3(0, 1.5f, 0);
-                gameObject.GetComponent<Evolution>().Evolve(myblock);
             }
 			Vector3 pos = hit.collider.transform.position;
 			Blockmechanics.CharacterCollision(pos, hit.collider.gameObject.GetComponent<BlockData>().id);

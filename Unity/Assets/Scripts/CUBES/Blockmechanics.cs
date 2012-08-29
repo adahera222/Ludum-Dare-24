@@ -49,7 +49,7 @@ public class Blockmechanics : MonoBehaviour {
 	
 	void Awake()
 	{
-		//collisionenter[1] = LevelChanger.CollisionHandler;
+		collisionenter[1] = LevelChanger.CollisionHandler;
 		tick[2] = SetMetadataRotation;
         tick[4] = gameObject.GetComponent<Electrocuter>().Tick;
 	}

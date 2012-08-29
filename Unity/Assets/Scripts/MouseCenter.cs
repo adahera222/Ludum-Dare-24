@@ -50,7 +50,7 @@ public class MouseCenter : MonoBehaviour {
             {
                 PlayerPrefs.DeleteAll();
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>().MissionLevel = 1;
-                GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>().Reset();
+                //GameObject.FindGameObjectWithTag("Player").GetComponent<Stats>().Reset();
             }
 			GUI.Label(new Rect(Screen.width / 2 - size.x / 2, Screen.height / 2 - size.y / 2, size.x, size.y), "PAUSED", style);
             GUI.Label(new Rect(0, Screen.height - 20, 300, 20), "Press M to mute/unmute");
@@ -66,10 +66,10 @@ public class MouseCenter : MonoBehaviour {
         if (stats != null)
         {
             PlayerPrefs.SetInt("Mission", stats.MissionLevel);
-            PlayerPrefs.SetFloat("maxspeedmodifier", stats.maxspeedmodifier);
-            PlayerPrefs.SetFloat("accelerationmodifier", stats.accelerationmodifier);
-            PlayerPrefs.SetFloat("JumpHeight", stats.JumpHeight);
-            PlayerPrefs.SetFloat("JumpDistance", stats.JumpDistance);
+            //PlayerPrefs.SetFloat("maxspeedmodifier", stats.maxspeedmodifier);
+            //PlayerPrefs.SetFloat("accelerationmodifier", stats.accelerationmodifier);
+            //PlayerPrefs.SetFloat("JumpHeight", stats.JumpHeight);
+            //PlayerPrefs.SetFloat("JumpDistance", stats.JumpDistance);
         }
     }
 }
